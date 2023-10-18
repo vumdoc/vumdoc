@@ -1,0 +1,39 @@
+{
+  "folders": [
+    {
+      "name": "root:vumdoc",
+      "path": "."
+    },
+    {
+      "name": "📄 docs",
+      "path": "docs"
+    },
+    {
+      "name": "📦 core",
+      "path": "packages/core"
+    },
+    {
+      "name": "📦 eslint-config",
+      "path": "packages/eslint-config"
+    },
+    {
+      "name": "📦 react",
+      "path": "packages/react"
+    },
+    {
+      "name": "📦 stylelint-config",
+      "path": "packages/stylelint-config"
+    },
+    {
+      "name": "📦 tsconfig",
+      "path": "packages/tsconfig"
+    },
+    {
+      "name": "📦 vue",
+      "path": "packages/vue"
+    }
+  ],
+  "settings": {
+    "cSpell.words": ["vumdoc"]
+  }
+}
