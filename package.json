@@ -4,12 +4,14 @@
   "description": "",
   "scripts": {
     "build": "turbo build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "core": "pnpm -F \"@vumdoc/core\"",
+    "tsconfig": "pnpm -F \"@vumdoc/tsconfig\""
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "plop": "^4.0.0",
     "turbo": "^1.10.15"
   },
   "packageManager": "pnpm@8.9.2",
