@@ -1,6 +1,7 @@
 import type { StorybookConfig } from "@storybook/web-components-vite";
 
-import { join, dirname } from "path";
+import { mergeConfig } from "vite";
+import { join, dirname, resolve } from "path";
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -26,6 +27,16 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: "tag",
+  },
+  viteFinal: (config) => {
+    return mergeConfig(config, {
+      resolve: {
+        alias: {
+          "~": resolve(__dirname, "../"),
+          "~/*": resolve(__dirname, "../*"),
+        },
+      },
+    });
   },
 };
 export default config;

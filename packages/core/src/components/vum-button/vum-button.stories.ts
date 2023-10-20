@@ -6,12 +6,21 @@ const meta = {
   title: "components/vum-button",
   tags: ["autodocs"],
   render: () => new VumButton(),
-  argTypes: {},
+  argTypes: {
+    mode: {
+      control: "select",
+      options: ["dark", "light"],
+    },
+  },
 } satisfies Meta<VumButtonProps>;
 
 export default meta;
 type Story = StoryObj<VumButtonProps>;
 
 export const Primary: Story = {
-  render: () => html`<vum-button></vum-button>`,
+  args: {
+    mode: "light",
+  },
+  render: (args) =>
+    html`<vum-button mode="${args.mode}">vum-button</vum-button>`,
 };

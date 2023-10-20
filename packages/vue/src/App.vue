@@ -2,7 +2,7 @@
 
 <template>
   <vum-element count-type="+2">
-    <p>Running on vite + vue3</p>
+    <h1>Running on vite + vue3</h1>
   </vum-element>
   <vum-button @click="() => console.log('click')" />
 </template>
