@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "tags": [
+    {
+      "name": "vum-button",
+      "attributes": []
+    },
+    {
+      "name": "vum-element",
+      "description": "An example element.\n\nSlots:\n\n  * ` ` {} - This element has a slot\n\nAttributes:\n\n  * `docsHint` {`string`} - Copy for the read the docs hint.\n\n  * `count` {`number`} - The number of times the button has been clicked.\n\n  * `count-type` {`\"+1\" | \"+2\" | \"+3\"`} - \n\nProperties:\n\n  * `docsHint` {`string`} - Copy for the read the docs hint.\n\n  * `count` {`number`} - The number of times the button has been clicked.\n\n  * `countType` {`\"+1\" | \"+2\" | \"+3\"`} - \n\n  * `styles` {`CSSResult`} - ",
+      "attributes": [
+        {
+          "name": "docsHint",
+          "description": "`docsHint` {`string`} - Copy for the read the docs hint.\n\nProperty: docsHint\n\nDefault: Click on the Vite and Lit logos to learn more"
+        },
+        {
+          "name": "count",
+          "description": "`count` {`number`} - The number of times the button has been clicked.\n\nProperty: count\n\nDefault: 0"
+        },
+        {
+          "name": "count-type",
+          "description": "`count-type` {`\"+1\" | \"+2\" | \"+3\"`} - \n\nProperty: countType\n\nDefault: +1",
+          "values": [
+            {
+              "name": "+1"
+            },
+            {
+              "name": "+2"
+            },
+            {
+              "name": "+3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalAttributes": [],
+  "valueSets": []
+}

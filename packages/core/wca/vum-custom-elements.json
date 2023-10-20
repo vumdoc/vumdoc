@@ -1,0 +1,72 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "vum-button",
+      "path": "./../src/components/vum-button/vum-button.ce.ts"
+    },
+    {
+      "name": "vum-element",
+      "path": "./../src/components/vum-element/vum-element.ce.ts",
+      "description": "An example element.",
+      "attributes": [
+        {
+          "name": "docsHint",
+          "description": "Copy for the read the docs hint.",
+          "type": "string",
+          "default": "\"Click on the Vite and Lit logos to learn more\""
+        },
+        {
+          "name": "count",
+          "description": "The number of times the button has been clicked.",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "count-type",
+          "type": "\"+1\" | \"+2\" | \"+3\"",
+          "default": "\"+1\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "docsHint",
+          "attribute": "docsHint",
+          "description": "Copy for the read the docs hint.",
+          "type": "string",
+          "default": "\"Click on the Vite and Lit logos to learn more\""
+        },
+        {
+          "name": "count",
+          "attribute": "count",
+          "description": "The number of times the button has been clicked.",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "countType",
+          "attribute": "count-type",
+          "type": "\"+1\" | \"+2\" | \"+3\"",
+          "default": "\"+1\""
+        },
+        {
+          "name": "styles",
+          "type": "CSSResult",
+          "default": "\"css`\\n    :host {\\n      max-width: 1280px;\\n      margin: 0 auto;\\n      padding: 2rem;\\n      text-align: center;\\n    }\\n\\n    .logo {\\n      height: 6em;\\n      padding: 1.5em;\\n      will-change: filter;\\n      transition: filter 300ms;\\n    }\\n    .logo:hover {\\n      filter: drop-shadow(0 0 2em #646cffaa);\\n    }\\n    .logo.lit:hover {\\n      filter: drop-shadow(0 0 2em #325cffaa);\\n    }\\n\\n    .card {\\n      padding: 2em;\\n    }\\n\\n    .read-the-docs {\\n      color: #888;\\n    }\\n\\n    ::slotted(h1) {\\n      font-size: 3.2em;\\n      line-height: 1.1;\\n    }\\n\\n    a {\\n      font-weight: 500;\\n      color: #646cff;\\n      text-decoration: inherit;\\n    }\\n    a:hover {\\n      color: #747bff;\\n    }\\n\\n    button {\\n      border-radius: 8px;\\n      border: 1px solid transparent;\\n      padding: 0.6em 1.2em;\\n      font-size: 1em;\\n      font-weight: 500;\\n      font-family: inherit;\\n      background-color: #f9f9f9;\\n      cursor: pointer;\\n      transition: border-color 0.25s;\\n    }\\n    button:hover {\\n      border-color: #646cff;\\n    }\\n    button:focus,\\n    button:focus-visible {\\n      outline: 4px auto -webkit-focus-ring-color;\\n    }\\n  `\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "This element has a slot"
+        }
+      ],
+      "cssParts": [
+        {
+          "name": "button",
+          "description": "The button"
+        }
+      ]
+    }
+  ]
+}

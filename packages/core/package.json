@@ -23,13 +23,24 @@
   "module": "./dist/core.js",
   "exports": {
     "import": "./dist/core.js",
-    "require": "./dist/core.cjs"
+    "require": "./dist/core.cjs",
+    "types": "./dist/types/main.d.ts"
   },
-  "types": "@types/components/swipe-modal.d.ts",
+  "types": "./types/index.d.ts",
+  "files": [
+    "dist/*",
+    "types/*",
+    "wca/*",
+    "LICENSE.md"
+  ],
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "vite build && tsc",
     "sb:dev": "storybook dev -p 6606 --no-open",
-    "sb:build": "storybook build"
+    "sb:build": "storybook build",
+    "wca:json": "web-component-analyzer src/components/**/*.ce.ts --format json --outFile wca/vum-custom-elements.json",
+    "wca:md": "web-component-analyzer src/components/**/*.ce.ts --format markdown --outDir wca/markdown",
+    "wca:vscode": "web-component-analyzer src/components/**/*.ce.ts --format vscode --outFile wca/vscode-vum-custom-data.json",
+    "wca:build": "pnpm wca:json && pnpm wca:md && pnpm wca:vscode"
   },
   "dependencies": {
     "lit": "^3.0.0"
@@ -46,6 +57,14 @@
     "react-dom": "^18.2.0",
     "storybook": "^7.5.0",
     "typescript": "^5.2.2",
-    "vite": "^4.5.0"
+    "vite": "^4.5.0",
+    "web-component-analyzer": "^2.0.0"
+  },
+  "webComponentAnalyzer": {
+    "analyze": {
+      "stylesheet": true,
+      "script": true,
+      "template": true
+    }
   }
 }

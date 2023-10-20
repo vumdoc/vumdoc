@@ -1,24 +1,26 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "es2021",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "lib": ["es2021", "dom"],
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "declarationMap": true,
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "outDir": "dist",
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["./*"]
+    },
+    "plugins": [
+      {
+        "name": "web-component-analyzer",
+        "analyze": true
+      }
+    ]
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

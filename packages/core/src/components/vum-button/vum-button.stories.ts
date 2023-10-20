@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
-import { VumButton, VumButtonProps } from "./vum-button";
+import { VumButton, VumButtonProps } from "./vum-button.ce";
 
 const meta = {
   title: "components/vum-button",

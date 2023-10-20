@@ -1,0 +1,4 @@
+{
+  // .html で補完を有効にする
+  // "html.customData": ["./wca/vscode-vum-custom-data.json"]
+}

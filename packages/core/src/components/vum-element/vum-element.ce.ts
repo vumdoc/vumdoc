@@ -1,7 +1,5 @@
 import { LitElement, css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import litLogo from "../../assets/lit.svg";
-import viteLogo from "/vite.svg";
 
 export type VumElementProps = {
   countType: "+1" | "+2" | "+3";
@@ -18,8 +16,8 @@ export class VumElement extends LitElement {
   /**
    * Copy for the read the docs hint.
    */
-  @property()
-  docsHint = "Click on the Vite and Lit logos to learn more";
+  @property({ attribute: false })
+  docsHint = "Click on the Vumdoc logos to learn more";
 
   /**
    * The number of times the button has been clicked.
@@ -40,7 +38,7 @@ export class VumElement extends LitElement {
           case "+3":
             return value;
           default:
-            console.error("<vum-element> : Invalid count-type");
+            console.error("<vum-element> : Invalid 'count-type' attribute");
             return "+1";
         }
       },
@@ -68,15 +66,13 @@ export class VumElement extends LitElement {
   render() {
     return html`
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src=${viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://lit.dev" target="_blank">
-          <img src=${litLogo} class="logo lit" alt="Lit logo" />
+        <a href="#" target="_blank">
+          <img src="/landscape-logo.png" class="logo" alt="Vumdoc logo" />
         </a>
       </div>
       <slot></slot>
       <div class="card">
+        <h1 class="heading">Vite + Lit = Vumdoc</h1>
         <button @click=${this._onClick} part="button">
           count is ${this.count}
         </button>
@@ -94,6 +90,17 @@ export class VumElement extends LitElement {
       margin: 0 auto;
       padding: 2rem;
       text-align: center;
+      font-family: Inter, "Satoshi", system-ui, Avenir, Helvetica, Arial,
+        sans-serif;
+      line-height: 1.5;
+    }
+
+    @font-face {
+      font-family: "Satoshi";
+      src: url("../assets/fonts/Satoshi-Variable.ttf") format("truetype");
+      font-weight: 300 900;
+      font-display: swap;
+      font-style: normal;
     }
 
     .logo {
@@ -102,15 +109,17 @@ export class VumElement extends LitElement {
       will-change: filter;
       transition: filter 300ms;
     }
+
     .logo:hover {
-      filter: drop-shadow(0 0 2em #646cffaa);
-    }
-    .logo.lit:hover {
-      filter: drop-shadow(0 0 2em #325cffaa);
+      filter: drop-shadow(0 0 2em #5498ff);
     }
 
     .card {
       padding: 2em;
+    }
+
+    .heading {
+      font-weight: 900;
     }
 
     .read-the-docs {
@@ -124,16 +133,16 @@ export class VumElement extends LitElement {
 
     a {
       font-weight: 500;
-      color: #646cff;
+      color: #5498ff;
       text-decoration: inherit;
     }
     a:hover {
-      color: #747bff;
+      color: #5498ff;
     }
 
     button {
       border-radius: 8px;
-      border: 1px solid transparent;
+      border: 4px solid transparent;
       padding: 0.6em 1.2em;
       font-size: 1em;
       font-weight: 500;
@@ -143,7 +152,7 @@ export class VumElement extends LitElement {
       transition: border-color 0.25s;
     }
     button:hover {
-      border-color: #646cff;
+      border-color: #5498ff;
     }
     button:focus,
     button:focus-visible {
