@@ -5,7 +5,8 @@
   "scripts": {
     "build": "turbo build",
     "core": "pnpm -F \"@vumdoc/core\"",
-    "tsconfig": "pnpm -F \"@vumdoc/tsconfig\""
+    "tsconfig": "pnpm -F \"@vumdoc/tsconfig\"",
+    "vue": "pnpm -F \"@vumdoc/vue\""
   },
   "keywords": [],
   "author": "",
