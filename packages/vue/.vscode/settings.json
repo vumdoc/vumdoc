@@ -1,0 +1,5 @@
+{
+  "html.customData": [
+    "./node_modules/@vumdoc/core/wca/vscode-vum-custom-data.json"
+  ]
+}
