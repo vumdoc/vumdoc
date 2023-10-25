@@ -7,7 +7,7 @@ export default create({
   fontCode: "monospace",
 
   brandTitle: "My custom Storybook",
-  brandUrl: "https://example.com",
+  brandUrl: "https://github.com/vumdoc/vumdoc/blob/main/packages/core",
   brandImage: "/landscape-logo.png",
   brandTarget: "_self",
 

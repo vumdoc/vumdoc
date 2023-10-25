@@ -11,6 +11,9 @@ const meta = {
       control: "select",
       options: ["dark", "light"],
     },
+    isDisabled: {
+      control: "boolean",
+    },
   },
 } satisfies Meta<VumButtonProps>;
 
@@ -20,7 +23,10 @@ type Story = StoryObj<VumButtonProps>;
 export const Primary: Story = {
   args: {
     mode: "light",
+    isDisabled: false,
   },
   render: (args) =>
-    html`<vum-button mode="${args.mode}">vum-button</vum-button>`,
+    html`<vum-button mode="${args.mode}" ?disabled=${args.isDisabled}
+      >vum-button</vum-button
+    >`,
 };
