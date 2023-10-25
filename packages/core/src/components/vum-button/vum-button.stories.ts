@@ -30,3 +30,14 @@ export const Primary: Story = {
       >vum-button</vum-button
     >`,
 };
+
+export const Disabled: Story = {
+  args: {
+    mode: "light",
+    isDisabled: true,
+  },
+  render: (args) =>
+    html`<vum-button mode="${args.mode}" ?disabled=${args.isDisabled}
+      >vum-button</vum-button
+    >`,
+};

@@ -34,6 +34,9 @@
     }
   ],
   "settings": {
-    "cSpell.words": ["satoshi", "vumdoc"]
+    "cSpell.words": ["satoshi", "vumdoc"],
+    "files.associations": {
+      "*.post.css": "postcss"
+    }
   }
 }

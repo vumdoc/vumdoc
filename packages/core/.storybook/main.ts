@@ -3,6 +3,9 @@ import type { StorybookConfig } from "@storybook/web-components-vite";
 import { mergeConfig } from "vite";
 import { join, dirname, resolve } from "path";
 
+import postcssLit from "rollup-plugin-postcss-lit";
+import postcssNesting from "postcss-nesting";
+
 /**
  * This function is used to resolve the absolute path of a package.
  * It is needed in projects that use Yarn PnP or are set up within a monorepo.
@@ -30,6 +33,14 @@ const config: StorybookConfig = {
   },
   viteFinal: (config) => {
     return mergeConfig(config, {
+      plugins: [postcssLit()],
+
+      css: {
+        postcss: {
+          plugins: [postcssNesting],
+        },
+      },
+
       resolve: {
         alias: {
           "~": resolve(__dirname, "../"),

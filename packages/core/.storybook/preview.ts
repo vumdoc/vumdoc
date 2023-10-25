@@ -1,5 +1,4 @@
 import type { Preview } from "@storybook/web-components";
-import "../src/stories/index.css";
 import vumTheme from "./vumTheme";
 
 const preview: Preview = {
