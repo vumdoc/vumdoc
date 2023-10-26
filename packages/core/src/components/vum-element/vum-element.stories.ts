@@ -1,6 +1,11 @@
-import type { Meta, StoryObj } from "@storybook/web-components";
-import { VumElement, VumElementProps } from "./vum-element.ce";
 import { html } from "lit";
+
+import type { Meta, StoryObj } from "@storybook/web-components";
+
+import {
+  VumElement,
+  VumElementProps,
+} from "~/src/components/vum-element/vum-element.ce";
 
 const meta = {
   title: "components/vum-element(sample)",

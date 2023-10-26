@@ -1,8 +1,9 @@
-import { CSSResult, LitElement, css, html, unsafeCSS } from "lit";
+import { CSSResult, LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { resetCss, satoshiFont, color } from "~/src/constants/styles";
 import { classMap } from "lit/directives/class-map.js";
+
 import style from "~/src/components/vum-button/vum-button.post.css?inline";
+import { resetCss, satoshiFont, color } from "~/src/constants/styles";
 
 export type VumButtonProps = {
   mode: "dark" | "light";

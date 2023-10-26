@@ -40,7 +40,8 @@
     "wca:json": "web-component-analyzer src/components/**/*.ce.ts --format json --outFile wca/vum-custom-elements.json",
     "wca:md": "web-component-analyzer src/components/**/*.ce.ts --format markdown --outDir wca/markdown",
     "wca:vscode": "web-component-analyzer src/components/**/*.ce.ts --format vscode --outFile wca/vscode-vum-custom-data.json",
-    "wca:build": "pnpm wca:json && pnpm wca:md && pnpm wca:vscode"
+    "wca:build": "pnpm wca:json && pnpm wca:md && pnpm wca:vscode",
+    "lint": "eslint --ext \".js,.ts\" --ignore-path .gitignore ."
   },
   "dependencies": {
     "lit": "^3.0.0"
@@ -53,6 +54,8 @@
     "@storybook/theming": "^7.5.0",
     "@storybook/web-components": "^7.5.0",
     "@storybook/web-components-vite": "^7.5.0",
+    "@vumdoc/eslint-config": "workspace:*",
+    "eslint": "^8.52.0",
     "postcss-nesting": "^12.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

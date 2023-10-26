@@ -6,6 +6,7 @@
     "build": "turbo build",
     "core": "pnpm -F \"@vumdoc/core\"",
     "tsconfig": "pnpm -F \"@vumdoc/tsconfig\"",
+    "eslint": "pnpm -F \"@vumdoc/eslint-config\"",
     "vue": "pnpm -F \"@vumdoc/vue\""
   },
   "keywords": [],

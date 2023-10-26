@@ -1,0 +1,20 @@
+{
+  "name": "@vumdoc/eslint-config",
+  "private": false,
+  "version": "1.0.0",
+  "scripts": {},
+  "keywords": [],
+  "author": "takuma-ru <kcattdev@gmail.com> (https://github.com/takuma-ru/)",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-unused-imports": "^3.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.52.0",
+    "typescript": ">=5.2.2"
+  }
+}

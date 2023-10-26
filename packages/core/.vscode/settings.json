@@ -1,4 +1,14 @@
 {
   // .html で補完を有効にする
   // "html.customData": ["./wca/vscode-vum-custom-data.json"]
+  "editor.formatOnSave": true, // ファイル保存時に自動整形を行うようにする
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // デフォルトのフォーマッターを「prettier」にする
+  "editor.tabSize": 2, // タブサイズを半角スペース二つにする
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "stylelint.validate": ["css", "postcss"], // stylelintの自動整形の対象ファイルを設定を行うようにする
+  "files.eol": "\n", // 改行コードを指定
+  "typescript.preferences.importModuleSpecifier": "non-relative"
 }
