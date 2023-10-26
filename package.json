@@ -7,6 +7,7 @@
     "core": "pnpm -F \"@vumdoc/core\"",
     "tsconfig": "pnpm -F \"@vumdoc/tsconfig\"",
     "eslint": "pnpm -F \"@vumdoc/eslint-config\"",
+    "prettier": "pnpm -F \"@vumdoc/prettier-config\"",
     "vue": "pnpm -F \"@vumdoc/vue\""
   },
   "keywords": [],
