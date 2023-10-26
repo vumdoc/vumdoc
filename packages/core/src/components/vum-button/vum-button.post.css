@@ -21,38 +21,130 @@
     border-radius: 8px;
     transition: all 0.2s ease-in-out;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-4px, -4px);
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border-radius: 12px;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    transition: outline 0.1s ease-in-out;
+  }
 }
 
-:host([mode="dark"]) {
-  & .vum-button {
+:host([mode="dark"]) .vum-button {
+  &:focus::before {
+    outline: 2px solid var(--dark-sub-text-color);
+    transition: outline 0.1s ease-in-out;
+  }
+
+  &.-primary {
     background-color: var(--dark-text-color);
     color: var(--dark-background-color);
+
+    &:hover::after {
+      background-color: #0000002e;
+    }
+
+    &:disabled {
+      background-color: var(--dark-sub-text-color);
+      color: var(--dark-text-color);
+      cursor: not-allowed;
+    }
+
+    &:disabled:hover::after {
+      background-color: transparent;
+    }
   }
 
-  & .vum-button:hover::after {
-    background-color: #0000002e;
+  &.-secondary {
+    background-color: transparent;
+    outline: 2px solid var(--dark-text-color);
+    outline-offset: -2px;
+    color: var(--dark-text-color);
+
+    &:hover::after {
+      background-color: #eaeaea6a;
+    }
+
+    &:disabled {
+      background-color: var(--dark-sub-background-color);
+      color: var(--dark-background-color);
+      cursor: not-allowed;
+    }
   }
 
-  & .vum-button:disabled {
-    background-color: var(--dark-sub-background-color);
-    color: var(--dark-background-color);
-    cursor: default;
+  &.-tertiary {
+    background-color: transparent;
+    color: var(--dark-text-color);
+
+    &:hover::after {
+      background-color: #eaeaea6a;
+    }
+
+    &:disabled {
+      background-color: var(--dark-sub-background-color);
+      color: var(--dark-background-color);
+      cursor: not-allowed;
+    }
   }
 }
 
-:host([mode="light"]) {
-  & .vum-button {
+:host([mode="light"]) .vum-button {
+  &:focus::before {
+    outline: 2px solid var(--light-sub-text-color);
+    transition: outline 0.1s ease-in-out;
+  }
+
+  &.-primary {
     background-color: var(--dark-background-color);
     color: var(--light-background-color);
+
+    &:hover::after {
+      background-color: #eaeaea2e;
+    }
+
+    &:disabled {
+      background-color: var(--light-sub-background-color);
+      color: var(--light-background-color);
+      cursor: not-allowed;
+    }
   }
 
-  & .vum-button:hover::after {
-    background-color: #eaeaea2e;
+  &.-secondary {
+    background-color: transparent;
+    outline: 2px solid var(--light-sub-text-color);
+    outline-offset: -2px;
+    color: var(--light-text-color);
+
+    &:hover::after {
+      background-color: #eaeaea6a;
+    }
+
+    &:disabled {
+      background-color: var(--light-sub-background-color);
+      color: var(--light-background-color);
+      cursor: not-allowed;
+    }
   }
 
-  & .vum-button:disabled {
-    background-color: var(--light-sub-background-color);
-    color: var(--light-background-color);
-    cursor: default;
+  &.-tertiary {
+    background-color: transparent;
+    color: var(--light-text-color);
+
+    &:hover::after {
+      background-color: #eaeaea6a;
+    }
+
+    &:disabled {
+      background-color: var(--light-sub-background-color);
+      color: var(--light-background-color);
+      cursor: not-allowed;
+    }
   }
 }

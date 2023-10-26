@@ -1,10 +1,12 @@
 import { CSSResult, LitElement, css, html, unsafeCSS } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { resetCss, satoshiFont, color } from "~/src/constants/styles";
+import { classMap } from "lit/directives/class-map.js";
 import style from "~/src/components/vum-button/vum-button.post.css?inline";
 
 export type VumButtonProps = {
-  mode: "dark" | "light" | string;
+  mode: "dark" | "light";
+  type: "primary" | "secondary" | "tertiary";
   isDisabled: boolean;
 };
 
@@ -16,8 +18,19 @@ export class VumButton extends LitElement {
   @property({ attribute: "disabled", type: Boolean })
   isDisabled: VumButtonProps["isDisabled"] = false;
 
+  @property({ attribute: "type", type: String })
+  type: VumButtonProps["type"] = "primary";
+
   render() {
-    return html`<button class="vum-button" ?disabled="${this.isDisabled}">
+    return html`<button
+      class=${classMap({
+        "vum-button": true,
+        "-primary": this.type === "primary",
+        "-secondary": this.type === "secondary",
+        "-tertiary": this.type === "tertiary",
+      })}
+      ?disabled="${this.isDisabled}"
+    >
       <slot></slot>
     </button>`;
   }
