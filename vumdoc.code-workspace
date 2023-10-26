@@ -35,8 +35,18 @@
   ],
   "settings": {
     "cSpell.words": ["satoshi", "vumdoc"],
+    "emmet.includeLanguages": {
+      "postcss": "css"
+    },
+    "emmet.syntaxProfiles": {
+      "postcss": "css"
+    },
+
     "files.associations": {
       "*.post.css": "postcss"
     }
+  },
+  "extensions": {
+    "recommendations": ["vunguyentuan.vscode-postcss"]
   }
 }
