@@ -17,6 +17,10 @@
       "path": "packages/eslint-config"
     },
     {
+      "name": "📦 prettier",
+      "path": "packages/prettier"
+    },
+    {
       "name": "📦 react",
       "path": "packages/react"
     },

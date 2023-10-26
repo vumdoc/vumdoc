@@ -16,6 +16,7 @@ const config = {
         allow: ["error", "warn"],
       },
     ],
+    quotes: ["error", "double"],
 
     "no-restricted-imports": [
       "error",

@@ -11,6 +11,7 @@ Vumdoc is a document UI framework module that aims to be *a modern and very soph
 | ------------------------------------------------------ | ------- | ----------- |
 | [@vumdoc/core](/packages/core)                         | none    |             |
 | [@vumdoc/eslint-config](/packages/eslint-config)       | none    |             |
+| [@vumdoc/prettier](/packages/prettier)                 | none    |             |
 | [@vumdoc/react](/packages/react)                       | none    |             |
 | [@vumdoc/stylelint-config](/packages/stylelint-config) | none    |             |
 | [@vumdoc/tsconfig](/packages/tsconfig)                 | none    |             |

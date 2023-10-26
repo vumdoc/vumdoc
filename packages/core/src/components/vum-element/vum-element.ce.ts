@@ -30,7 +30,7 @@ export class VumElement extends LitElement {
     type: String,
     converter: {
       fromAttribute(
-        value: VumElementProps["countType"]
+        value: VumElementProps["countType"],
       ): VumElementProps["countType"] {
         switch (value) {
           case "+1":
@@ -38,7 +38,7 @@ export class VumElement extends LitElement {
           case "+3":
             return value;
           default:
-            console.error("<vum-element> : Invalid 'count-type' attribute");
+            console.error("<vum-element> : Invalid `count-type` attribute");
             return "+1";
         }
       },
@@ -66,14 +66,24 @@ export class VumElement extends LitElement {
   render() {
     return html`
       <div>
-        <a href="#" target="_blank">
-          <img src="/landscape-logo.png" class="logo" alt="Vumdoc logo" />
+        <a
+          href="#"
+          target="_blank"
+        >
+          <img
+            src="/landscape-logo.png"
+            class="logo"
+            alt="Vumdoc logo"
+          />
         </a>
       </div>
       <slot></slot>
       <div class="card">
         <h1 class="heading">Vite + Lit = Vumdoc</h1>
-        <button @click=${this._onClick} part="button">
+        <button
+          @click=${this._onClick}
+          part="button"
+        >
           count is ${this.count}
         </button>
       </div>
