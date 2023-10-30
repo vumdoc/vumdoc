@@ -1,4 +1,4 @@
-import postcssNesting from "postcss-nesting";
+import postcssNested from "postcss-nested";
 import postcssLit from "rollup-plugin-postcss-lit";
 import { defineConfig } from "vite";
 
@@ -7,7 +7,7 @@ export default defineConfig({
 
   css: {
     postcss: {
-      plugins: [postcssNesting],
+      plugins: [postcssNested],
     },
   },
 

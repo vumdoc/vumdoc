@@ -8,7 +8,7 @@
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
-  "stylelint.validate": ["css", "postcss"], // stylelintの自動整形の対象ファイルを設定を行うようにする
+  "stylelint.validate": ["css", "postcss", "post.css"], // stylelintの自動整形の対象ファイルを設定を行うようにする
   "files.eol": "\n", // 改行コードを指定
   "typescript.preferences.importModuleSpecifier": "non-relative"
 }

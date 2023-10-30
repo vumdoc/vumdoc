@@ -31,6 +31,7 @@ export class VumButton extends LitElement {
         "-tertiary": this.type === "tertiary",
       })}
       ?disabled="${this.isDisabled}"
+      ?data-is-dark="${this.mode === "dark"}"
     >
       <slot></slot>
     </button>`;

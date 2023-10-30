@@ -1,150 +1,148 @@
 .vum-button {
   position: relative;
-  border-radius: 8px;
-  border: none;
-  outline: none;
   padding: 8px 16px;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
   cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  outline: none;
   transition: all 0.1s ease-in-out;
-  font-weight: 500;
 
   &::after {
-    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    content: "";
     background-color: transparent;
     border-radius: 8px;
     transition: all 0.2s ease-in-out;
   }
 
   &::before {
-    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-4px, -4px);
     width: calc(100% + 8px);
     height: calc(100% + 8px);
+    content: "";
     border-radius: 12px;
     outline: 2px solid transparent;
     outline-offset: -2px;
-    transition: outline 0.1s ease-in-out;
-  }
-}
-
-:host([mode="dark"]) .vum-button {
-  &:focus::before {
-    outline: 2px solid var(--dark-sub-text-color);
-    transition: outline 0.1s ease-in-out;
+    transition: outline 0.2s ease-in-out;
+    transform: translate(-4px, -4px);
   }
 
-  &.-primary {
-    background-color: var(--dark-text-color);
-    color: var(--dark-background-color);
-
-    &:hover::after {
-      background-color: #0000002e;
-    }
-
-    &:disabled {
-      background-color: var(--dark-sub-text-color);
-      color: var(--dark-text-color);
-      cursor: not-allowed;
-    }
-
-    &:disabled:hover::after {
-      background-color: transparent;
-    }
-  }
-
-  &.-secondary {
-    background-color: transparent;
-    outline: 2px solid var(--dark-text-color);
-    outline-offset: -2px;
-    color: var(--dark-text-color);
-
-    &:hover::after {
-      background-color: #eaeaea6a;
-    }
-
-    &:disabled {
-      background-color: var(--dark-sub-background-color);
-      color: var(--dark-background-color);
-      cursor: not-allowed;
-    }
-  }
-
-  &.-tertiary {
-    background-color: transparent;
-    color: var(--dark-text-color);
-
-    &:hover::after {
-      background-color: #eaeaea6a;
-    }
-
-    &:disabled {
-      background-color: var(--dark-sub-background-color);
-      color: var(--dark-background-color);
-      cursor: not-allowed;
-    }
-  }
-}
-
-:host([mode="light"]) .vum-button {
   &:focus::before {
     outline: 2px solid var(--light-sub-text-color);
     transition: outline 0.1s ease-in-out;
   }
 
   &.-primary {
-    background-color: var(--dark-background-color);
     color: var(--light-background-color);
+    background-color: var(--dark-background-color);
+
+    &:disabled {
+      color: var(--light-background-color);
+      cursor: not-allowed;
+      background-color: var(--light-sub-background-color);
+    }
 
     &:hover::after {
       background-color: #eaeaea2e;
     }
-
-    &:disabled {
-      background-color: var(--light-sub-background-color);
-      color: var(--light-background-color);
-      cursor: not-allowed;
-    }
   }
 
   &.-secondary {
+    color: var(--light-text-color);
     background-color: transparent;
     outline: 2px solid var(--light-sub-text-color);
     outline-offset: -2px;
-    color: var(--light-text-color);
 
     &:hover::after {
       background-color: #eaeaea6a;
     }
 
     &:disabled {
-      background-color: var(--light-sub-background-color);
       color: var(--light-background-color);
       cursor: not-allowed;
+      background-color: var(--light-sub-background-color);
     }
   }
 
   &.-tertiary {
-    background-color: transparent;
     color: var(--light-text-color);
+    background-color: transparent;
 
     &:hover::after {
       background-color: #eaeaea6a;
     }
 
     &:disabled {
-      background-color: var(--light-sub-background-color);
       color: var(--light-background-color);
       cursor: not-allowed;
+      background-color: var(--light-sub-background-color);
+    }
+  }
+
+  &[data-is-dark] {
+    &:focus::before {
+      outline: 2px solid var(--dark-sub-text-color);
+      transition: outline 0.1s ease-in-out;
+    }
+
+    &.-primary {
+      color: var(--dark-background-color);
+      background-color: var(--dark-text-color);
+
+      &:hover::after {
+        background-color: #0000002e;
+      }
+
+      &:disabled {
+        color: var(--dark-text-color);
+        cursor: not-allowed;
+        background-color: var(--dark-sub-text-color);
+      }
+
+      &:disabled:hover::after {
+        background-color: transparent;
+      }
+    }
+
+    &.-secondary {
+      color: var(--dark-text-color);
+      background-color: transparent;
+      outline: 2px solid var(--dark-text-color);
+      outline-offset: -2px;
+
+      &:hover::after {
+        background-color: #eaeaea6a;
+      }
+
+      &:disabled {
+        color: var(--dark-background-color);
+        cursor: not-allowed;
+        background-color: var(--dark-sub-background-color);
+      }
+    }
+
+    &.-tertiary {
+      color: var(--dark-text-color);
+      background-color: transparent;
+
+      &:hover::after {
+        background-color: #eaeaea6a;
+      }
+
+      &:disabled {
+        color: var(--dark-background-color);
+        cursor: not-allowed;
+        background-color: var(--dark-sub-background-color);
+      }
     }
   }
 }

@@ -1,0 +1,19 @@
+{
+  "name": "@vumdoc/stylelint-config",
+  "version": "1.0.0",
+  "private": false,
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "takuma-ru <kcattdev@gmail.com> (https://github.com/takuma-ru/)",
+  "license": "ISC",
+  "dependencies": {
+    "stylelint-config-recess-order": "^4.3.0",
+    "stylelint-config-recommended": "^13.0.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-rscss": "^0.4.0"
+  },
+  "peerDependencies": {
+    "stylelint": ">=15.11.0"
+  }
+}

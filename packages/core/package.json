@@ -42,6 +42,7 @@
     "wca:vscode": "web-component-analyzer src/components/**/*.ce.ts --format vscode --outFile wca/vscode-vum-custom-data.json",
     "wca:build": "pnpm wca:json && pnpm wca:md && pnpm wca:vscode",
     "lint": "eslint --ext \".js,.ts\" --ignore-path .gitignore .",
+    "lint:style": "stylelint \"**/*.{css,scss,sass,html}\" --ignore-path .gitignore",
     "format": "prettier -w ."
   },
   "dependencies": {
@@ -57,14 +58,17 @@
     "@storybook/web-components-vite": "^7.5.0",
     "@vumdoc/eslint-config": "workspace:*",
     "@vumdoc/prettier-config": "workspace:*",
+    "@vumdoc/stylelint-config": "workspace:*",
     "eslint": "^8.52.0",
     "eslint-plugin-lit": "^1.10.1",
     "eslint-plugin-wc": "^2.0.4",
+    "postcss-nested": "^6.0.1",
     "postcss-nesting": "^12.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup-plugin-postcss-lit": "^2.1.0",
     "storybook": "^7.5.0",
+    "stylelint": "^15.11.0",
     "typescript": "^5.2.2",
     "vite": "^4.5.0",
     "web-component-analyzer": "^2.0.0"
