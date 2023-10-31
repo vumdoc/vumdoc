@@ -14,12 +14,18 @@ export type VumButtonProps = {
 
 @customElement("vum-button")
 export class VumButton extends LitElement {
+  /**
+   * Specify the display mode as `dark | light`.
+   */
   @property({ attribute: "mode", type: String })
   mode: VumButtonProps["mode"] = "light";
 
   @property({ attribute: "disabled", type: Boolean })
   isDisabled: VumButtonProps["isDisabled"] = false;
 
+  /**
+   * Specify the button style
+   */
   @property({ attribute: "type", type: String })
   type: VumButtonProps["type"] = "primary";
 
