@@ -1,0 +1,35 @@
+name: Release Storybook to GitHubPages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "packages/core/**"
+
+env:
+  cache-version: v1
+
+jobs:
+  release:
+    name: Project Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Setup volta
+      - uses: volta-cli/action@v4
+
+      - name: Install Node Dependencies
+        run: pnpm install
+
+      - name: Build package
+        run: pnpm core sb:build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./packages/core/storybook-static
