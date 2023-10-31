@@ -12,6 +12,9 @@ env:
 
 jobs:
   release:
+    permissions:
+      pages: write
+      id-token: write
     name: Project Build
     runs-on: ubuntu-latest
 

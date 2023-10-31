@@ -33,6 +33,8 @@ export class VumButton extends LitElement {
   type: VumButtonProps["type"] = "primary";
 
   /**
+   * The link will be opened when the button is clicked.
+   *
    * Specifying this will change it to `<a>`.
    */
   @property({ attribute: "href", type: String })
