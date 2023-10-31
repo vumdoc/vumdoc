@@ -9,6 +9,7 @@ export type VumButtonProps = {
   mode: "dark" | "light";
   type: "primary" | "secondary" | "tertiary";
   isDisabled: boolean;
+  href?: string;
 };
 
 @customElement("vum-button")
@@ -22,19 +23,37 @@ export class VumButton extends LitElement {
   @property({ attribute: "type", type: String })
   type: VumButtonProps["type"] = "primary";
 
+  @property({ attribute: "href", type: String })
+  href: VumButtonProps["href"] = undefined;
+
   render() {
-    return html`<button
-      class=${classMap({
-        "vum-button": true,
-        "-primary": this.type === "primary",
-        "-secondary": this.type === "secondary",
-        "-tertiary": this.type === "tertiary",
-      })}
-      ?disabled="${this.isDisabled}"
-      ?data-is-dark="${this.mode === "dark"}"
-    >
-      <slot></slot>
-    </button>`;
+    return this.href
+      ? html`<a
+          class=${classMap({
+            "vum-button": true,
+            "-primary": this.type === "primary",
+            "-secondary": this.type === "secondary",
+            "-tertiary": this.type === "tertiary",
+            "-disabled": this.isDisabled,
+            "-href": !!this.href,
+          })}
+          ?data-is-dark="${this.mode === "dark"}"
+          href="${this.href}"
+        >
+          <slot></slot>
+        </a>`
+      : html`<button
+          class=${classMap({
+            "vum-button": true,
+            "-primary": this.type === "primary",
+            "-secondary": this.type === "secondary",
+            "-tertiary": this.type === "tertiary",
+            "-disabled": this.isDisabled,
+          })}
+          ?data-is-dark="${this.mode === "dark"}"
+        >
+          <slot></slot>
+        </button>`;
   }
 
   static styles = [color, satoshiFont, resetCss, style as unknown as CSSResult];

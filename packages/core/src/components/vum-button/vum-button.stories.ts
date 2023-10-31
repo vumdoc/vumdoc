@@ -17,6 +17,7 @@ const meta = {
       mode="${args.mode}"
       ?disabled=${args.isDisabled}
       type="${args.type}"
+      href="${args.href}"
       >vum-button</vum-button
     >`;
   },
@@ -31,6 +32,9 @@ const meta = {
     },
     isDisabled: {
       control: "boolean",
+    },
+    href: {
+      control: "text",
     },
   },
 } satisfies Meta<VumButtonProps>;
@@ -67,5 +71,14 @@ export const Disabled: Story = {
     mode: "light",
     isDisabled: true,
     type: "primary",
+  },
+};
+
+export const LinkButton: Story = {
+  args: {
+    mode: "light",
+    isDisabled: false,
+    type: "primary",
+    href: "https://www.google.com",
   },
 };

@@ -1,5 +1,7 @@
 .vum-button {
   position: relative;
+  display: block;
+  width: fit-content;
   padding: 8px 16px;
   font-size: 16px;
   font-weight: 500;
@@ -41,11 +43,21 @@
     transition: outline 0.1s ease-in-out;
   }
 
+  &.-disabled:focus::before {
+    outline: 2px solid transparent;
+  }
+
+  &.-href {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
   &.-primary {
     color: var(--light-background-color);
     background-color: var(--dark-background-color);
 
-    &:disabled {
+    &.-disabled {
       color: var(--light-background-color);
       cursor: not-allowed;
       background-color: var(--light-sub-background-color);
@@ -66,13 +78,13 @@
       background-color: #eaeaea6a;
     }
 
-    &:disabled {
+    &.-disabled {
       color: var(--light-sub-background-color);
       cursor: not-allowed;
       outline-color: var(--light-sub-background-color);
     }
 
-    &:disabled:hover::after {
+    &.-disabled:hover::after {
       background-color: transparent;
     }
   }
@@ -85,12 +97,12 @@
       background-color: #eaeaea6a;
     }
 
-    &:disabled {
+    &.-disabled {
       color: var(--light-sub-background-color);
       cursor: not-allowed;
     }
 
-    &:disabled:hover::after {
+    &.-disabled:hover::after {
       background-color: transparent;
     }
   }
@@ -109,13 +121,13 @@
         background-color: #0000002e;
       }
 
-      &:disabled {
+      &.-disabled {
         color: var(--dark-text-color);
         cursor: not-allowed;
         background-color: var(--dark-sub-text-color);
       }
 
-      &:disabled:hover::after {
+      &.-disabled:hover::after {
         background-color: transparent;
       }
     }
@@ -130,13 +142,13 @@
         background-color: #eaeaea6a;
       }
 
-      &:disabled {
+      &.-disabled {
         color: var(--dark-sub-text-color);
         cursor: not-allowed;
         outline-color: var(--dark-sub-text-color);
       }
 
-      &:disabled:hover::after {
+      &.-disabled:hover::after {
         background-color: transparent;
       }
     }
@@ -149,12 +161,12 @@
         background-color: #eaeaea6a;
       }
 
-      &:disabled {
+      &.-disabled {
         color: var(--dark-sub-text-color);
         cursor: not-allowed;
       }
 
-      &:disabled:hover::after {
+      &.-disabled:hover::after {
         background-color: transparent;
       }
     }
