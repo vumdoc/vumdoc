@@ -112,12 +112,6 @@ importers:
         specifier: '>=5.2.2'
         version: 5.2.2
 
-  packages/prettier:
-    dependencies:
-      prettier:
-        specifier: '>=3.0.0'
-        version: 3.0.3
-
   packages/prettier-config:
     dependencies:
       prettier:
