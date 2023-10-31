@@ -20,6 +20,9 @@ export class VumButton extends LitElement {
   @property({ attribute: "mode", type: String })
   mode: VumButtonProps["mode"] = "light";
 
+  /**
+   * Specify whether the button should be disabled, or not
+   */
   @property({ attribute: "disabled", type: Boolean })
   isDisabled: VumButtonProps["isDisabled"] = false;
 
@@ -29,6 +32,9 @@ export class VumButton extends LitElement {
   @property({ attribute: "type", type: String })
   type: VumButtonProps["type"] = "primary";
 
+  /**
+   * Specifying this will change it to `<a>`.
+   */
   @property({ attribute: "href", type: String })
   href: VumButtonProps["href"] = undefined;
 
