@@ -6,9 +6,9 @@ import style from "~/src/components/vum-button/vum-button.post.css?inline";
 import { resetCss, satoshiFont, color } from "~/src/constants/styles";
 
 export type VumButtonProps = {
-  mode: "dark" | "light";
-  type: "primary" | "secondary" | "tertiary";
-  isDisabled: boolean;
+  mode?: "dark" | "light";
+  type?: "primary" | "secondary" | "tertiary";
+  isDisabled?: boolean;
   href?: string;
 };
 
