@@ -67,9 +67,13 @@
     }
 
     &:disabled {
-      color: var(--light-background-color);
+      color: var(--light-sub-background-color);
       cursor: not-allowed;
-      background-color: var(--light-sub-background-color);
+      outline-color: var(--light-sub-background-color);
+    }
+
+    &:disabled:hover::after {
+      background-color: transparent;
     }
   }
 
@@ -82,9 +86,12 @@
     }
 
     &:disabled {
-      color: var(--light-background-color);
+      color: var(--light-sub-background-color);
       cursor: not-allowed;
-      background-color: var(--light-sub-background-color);
+    }
+
+    &:disabled:hover::after {
+      background-color: transparent;
     }
   }
 
@@ -124,9 +131,13 @@
       }
 
       &:disabled {
-        color: var(--dark-background-color);
+        color: var(--dark-sub-text-color);
         cursor: not-allowed;
-        background-color: var(--dark-sub-background-color);
+        outline-color: var(--dark-sub-text-color);
+      }
+
+      &:disabled:hover::after {
+        background-color: transparent;
       }
     }
 
@@ -139,9 +150,12 @@
       }
 
       &:disabled {
-        color: var(--dark-background-color);
+        color: var(--dark-sub-text-color);
         cursor: not-allowed;
-        background-color: var(--dark-sub-background-color);
+      }
+
+      &:disabled:hover::after {
+        background-color: transparent;
       }
     }
   }
