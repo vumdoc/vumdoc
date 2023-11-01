@@ -43,7 +43,8 @@
     "wca:build": "pnpm wca:json && pnpm wca:md && pnpm wca:vscode",
     "lint": "eslint --ext \".js,.ts\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,html}\" --ignore-path .gitignore",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "gen:component": "plop --plopfile ./.plop/component/index.mjs"
   },
   "dependencies": {
     "lit": "^3.0.0"
@@ -62,6 +63,7 @@
     "eslint": "^8.52.0",
     "eslint-plugin-lit": "^1.10.1",
     "eslint-plugin-wc": "^2.0.4",
+    "plop": "^4.0.0",
     "postcss-nested": "^6.0.1",
     "postcss-nesting": "^12.0.1",
     "react": "^18.2.0",

@@ -1,0 +1,35 @@
+import { CSSResult, LitElement, html } from "lit";
+import { customElement } from "lit/decorators.js";
+import { classMap } from "lit/directives/class-map.js";
+
+import style from "~/src/components/{{kebabCase name}}/{{kebabCase name}}.post.css?inline";
+import { resetCss, satoshiFont, color } from "~/src/constants/styles";
+
+export type {{pascalCase name}}Props = {};
+
+@customElement("{{kebabCase name}}")
+export class {{pascalCase name}} extends LitElement {
+  /*
+  // sample
+  @property({ attribute: "sample", type: String })
+  sample: {{pascalCase name}}Props["sample"] = "sample";
+  */
+
+  render() {
+    return html`<div
+      class=${classMap({
+        "{{kebabCase name}}": true,
+      })}
+    >
+      <slot></slot>
+    </div>`;
+  }
+
+  static styles = [color, satoshiFont, resetCss, style as unknown as CSSResult];
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "{{kebabCase name}}": {{pascalCase name}};
+  }
+}

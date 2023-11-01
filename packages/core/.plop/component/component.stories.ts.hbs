@@ -1,0 +1,26 @@
+import { html } from "lit";
+
+import type { Meta, StoryObj } from "@storybook/web-components";
+
+import {
+  {{pascalCase name}},
+  {{pascalCase name}}Props,
+} from "~/src/components/{{kebabCase name}}/{{kebabCase name}}.ce";
+
+const meta = {
+  title: "components/{{kebabCase name}}",
+  tags: ["autodocs"],
+  render: (args) => {
+    new {{pascalCase name}}();
+
+    return html`<{{kebabCase name}}>{{kebabCase name}}</{{kebabCase name}}>`;
+  },
+  argTypes: {},
+} satisfies Meta<{{pascalCase name}}Props>;
+
+export default meta;
+type Story = StoryObj<{{pascalCase name}}Props>;
+
+export const Primary: Story = {
+  args: {},
+};
