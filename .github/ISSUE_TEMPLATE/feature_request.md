@@ -1,7 +1,7 @@
 ---
-name: Feature request
+name: ✨ Feature request
 about: Suggest an idea for this project
-title: ":sparkle: XXX"
+title: ":sparkles: XXX"
 labels: ":sparkles: enhancement"
 assignees: ''
 
@@ -9,7 +9,7 @@ assignees: ''
 
 <!-- ⚠️ATTENTION⚠️: If you know which package the new feature relates to, please give it the appropriate label! (This saves time by eliminating the need to check when implementing) -->
 
-### Packages
+### Package Name
 - [ ] core
 - [ ] react
 - [ ] vue
@@ -17,15 +17,13 @@ assignees: ''
 - [ ] stylelint-config
 - [ ] prettier-config
 - [ ] tsconfig
-- [ ] other
+- [ ] Other
 
 ### Summary
-<!-- MEMO: Please explain in short sentences what kind of bugs -->
+<!-- MEMO: Please explain in short sentences what kind of request -->
 
 
-### Reproduction
-<!-- MEMO: Please describe the environment and program in which the bug can be reproduced -->
+### Specific Description
+<!-- MEMO: Summary Please describe more specifically if necessary.
+(We would appreciate it if you could describe the implementation method or a program that implements a similar method) -->
 
-
-### Comments
-<!-- MEMO: Anything else you would like to tell/share about this bug -->
