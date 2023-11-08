@@ -2,7 +2,7 @@
 name: 📝 Update document
 about: Add new pages to document pages, modify typos, etc.
 title: "📝 XXX"
-labels: ":📄 docs site"
+labels: ":page_facing_up: docs site"
 assignees: ''
 
 ---
