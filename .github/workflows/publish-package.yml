@@ -9,7 +9,17 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-
+    permissions:
+      actions: write
+      checks: write
+      contents: write
+      deployments: write
+      issues: write
+      packages: write
+      pull-requests: write
+      repository-projects: write
+      security-events: write
+      statuses: write
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -66,18 +76,23 @@ jobs:
 
       - name: Major release
         id: major
-        run: pnpm dlx release-it -- major --ci --preRelease=beta --filter @vumdoc/core
+        run: pnpm core publish:major
         if: contains(toJSON(github.event.commits.*.message), '🚀 major')
 
       - name: Minor release
         id: minor
-        run: pnpm dlx release-it -- minor --ci --filter @vumdoc/core
+        run: pnpm core publish:minor
         if: steps.major.conclusion == 'skipped' && contains(toJSON(github.event.commits.*.message), '🚀 minor')
 
       - name: Patch release
         id: patch
-        run: pnpm dlx release-it -- patch --ci --filter @vumdoc/core
+        run: pnpm core publish:patch
         if: steps.minor.conclusion == 'skipped' && contains(toJSON(github.event.commits.*.message), '🚀 patch')
+
+      - name: Prerelease release
+        id: prerelease
+        run: pnpm core publish:prerelease
+        if: steps.patch.conclusion == 'skipped' && contains(toJSON(github.event.commits.*.message), '🚀 prerelease')
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4

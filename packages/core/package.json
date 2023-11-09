@@ -44,7 +44,11 @@
     "lint": "eslint --ext \".js,.ts\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,html}\" --ignore-path .gitignore",
     "format": "prettier -w .",
-    "gen:component": "plop --plopfile ./.plop/component/index.mjs"
+    "gen:component": "plop --plopfile ./.plop/component/index.mjs",
+    "publish:major": "pnpm dlx release-it -- major --ci",
+    "publish:minor": "pnpm dlx release-it -- minor --ci",
+    "publish:patch": "pnpm dlx release-it -- patch --ci",
+    "publish:prerelease": "pnpm dlx release-it -- prerelease --ci"
   },
   "dependencies": {
     "consola": "^3.2.3",
