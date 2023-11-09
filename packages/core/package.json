@@ -49,12 +49,12 @@
     "lint:style": "stylelint \"**/*.{css,scss,sass,html}\" --ignore-path .gitignore",
     "format": "prettier -w .",
     "gen:component": "plop --plopfile ./.plop/component/index.mjs",
-    "publish:major": "pnpm dlx release-it -- major --ci",
-    "publish:minor": "pnpm dlx release-it -- minor --ci",
-    "publish:patch": "pnpm dlx release-it -- patch --ci",
-    "publish:beta": "pnpm dlx release-it -- minor --preRelease=beta --ci",
-    "publish:alpha": "pnpm dlx release-it -- minor --preRelease=alpha --ci",
-    "publish:prerelease": "pnpm dlx release-it -- prerelease --ci"
+    "publish:major": "pnpm build && pnpm dlx release-it -- major --ci",
+    "publish:minor": "pnpm build && pnpm dlx release-it -- minor --ci",
+    "publish:patch": "pnpm build && pnpm dlx release-it -- patch --ci",
+    "publish:beta": "pnpm build && pnpm dlx release-it -- minor --preRelease=beta --ci",
+    "publish:alpha": "pnpm build && pnpm dlx release-it -- minor --preRelease=alpha --ci",
+    "publish:prerelease": "pnpm build && pnpm dlx release-it -- prerelease --ci"
   },
   "dependencies": {
     "consola": "^3.2.3",
