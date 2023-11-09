@@ -1,7 +1,7 @@
 {
   "name": "@vumdoc/core",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "description": "@vumdoc/core",
   "license": "MIT",
@@ -48,6 +48,8 @@
     "publish:major": "pnpm dlx release-it -- major --ci",
     "publish:minor": "pnpm dlx release-it -- minor --ci",
     "publish:patch": "pnpm dlx release-it -- patch --ci",
+    "publish:beta": "pnpm dlx release-it -- minor --preRelease=beta --ci",
+    "publish:alpha": "pnpm dlx release-it -- minor --preRelease=alpha --ci",
     "publish:prerelease": "pnpm dlx release-it -- prerelease --ci"
   },
   "dependencies": {

@@ -89,14 +89,19 @@ jobs:
         run: pnpm core publish:patch
         if: steps.minor.conclusion == 'skipped' && contains(toJSON(github.event.commits.*.message), '🚀 patch')
 
-      - name: Prerelease release
+      - name: Beta release
+        id: beta
+        run: pnpm core publish:beta
+        if: steps.patch.conclusion == 'skipped' && contains(toJSON(github.event.commits.*.message), '🚀 beta')
+
+      - name: Prerelease
         id: prerelease
         run: pnpm core publish:prerelease
-        if: steps.patch.conclusion == 'skipped' && contains(toJSON(github.event.commits.*.message), '🚀 prerelease')
+        if: steps.beta.conclusion == 'skipped' && contains(toJSON(github.event.commits.*.message), '🚀 prerelease')
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
-        if: steps.major.conclusion == 'success' || steps.minor.conclusion == 'success' || steps.patch.conclusion == 'success'
+        if: steps.major.conclusion == 'success' || steps.minor.conclusion == 'success' || steps.patch.conclusion == 'success' || steps.beta.conclusion == 'success'
         with:
           title: "Update package.json"
           draft: false
