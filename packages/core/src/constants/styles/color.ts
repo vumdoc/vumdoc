@@ -38,7 +38,7 @@ export const COLORS = {
 };
 
 export const color = css`
-  :host([mode="dark"]) {
+  :host([data-is-dark]) {
     --primary-color: ${unsafeCSS(COLORS.DARK.PRIMARY)};
     --secondary-color: ${unsafeCSS(COLORS.DARK.SECONDARY)};
     --text-color: ${unsafeCSS(COLORS.DARK.TEXT)};
@@ -64,7 +64,7 @@ export const color = css`
     --light-border-color: ${unsafeCSS(COLORS.LIGHT.BORDER)};
   }
 
-  :host([mode="light"]) {
+  :host {
     --primary-color: ${unsafeCSS(COLORS.LIGHT.PRIMARY)};
     --secondary-color: ${unsafeCSS(COLORS.LIGHT.SECONDARY)};
     --text-color: ${unsafeCSS(COLORS.LIGHT.TEXT)};

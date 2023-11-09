@@ -1,6 +1,8 @@
 import { LitElement, css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 
+import "~/src/components/vum-button/vum-button.ce";
+
 export type VumElementProps = {
   countType: "+1" | "+2" | "+3";
 };
@@ -80,12 +82,9 @@ export class VumElement extends LitElement {
       <slot></slot>
       <div class="card">
         <h1 class="heading">Vite + Lit = Vumdoc</h1>
-        <button
-          @click=${this._onClick}
-          part="button"
-        >
+        <vum-button @click=${this._onClick}>
           count is ${this.count}
-        </button>
+        </vum-button>
       </div>
       <p class="read-the-docs">
         Counts increase in multiples of ${this.countType}
@@ -126,6 +125,10 @@ export class VumElement extends LitElement {
 
     .card {
       padding: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .heading {
@@ -148,25 +151,6 @@ export class VumElement extends LitElement {
     }
     a:hover {
       color: #5498ff;
-    }
-
-    button {
-      border-radius: 8px;
-      border: 4px solid transparent;
-      padding: 0.6em 1.2em;
-      font-size: 1em;
-      font-weight: 500;
-      font-family: inherit;
-      background-color: #f9f9f9;
-      cursor: pointer;
-      transition: border-color 0.25s;
-    }
-    button:hover {
-      border-color: #5498ff;
-    }
-    button:focus,
-    button:focus-visible {
-      outline: 4px auto -webkit-focus-ring-color;
     }
   `;
 }
