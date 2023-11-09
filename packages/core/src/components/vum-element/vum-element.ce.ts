@@ -1,3 +1,4 @@
+import { consola } from "consola";
 import { LitElement, css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 
@@ -40,7 +41,7 @@ export class VumElement extends LitElement {
           case "+3":
             return value;
           default:
-            console.error("<vum-element> : Invalid `count-type` attribute");
+            consola.error("<vum-element> : Invalid `count-type` attribute");
             return "+1";
         }
       },

@@ -38,7 +38,7 @@
     }
   ],
   "settings": {
-    "cSpell.words": ["satoshi", "vumdoc"],
+    "cSpell.words": ["consola", "satoshi", "vumdoc"],
     "emmet.includeLanguages": {
       "postcss": "css"
     },

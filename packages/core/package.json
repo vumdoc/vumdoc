@@ -47,6 +47,7 @@
     "gen:component": "plop --plopfile ./.plop/component/index.mjs"
   },
   "dependencies": {
+    "consola": "^3.2.3",
     "lit": "^3.0.0"
   },
   "devDependencies": {
