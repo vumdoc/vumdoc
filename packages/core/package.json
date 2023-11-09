@@ -1,7 +1,7 @@
 {
   "name": "@vumdoc/core",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.1-0",
   "type": "module",
   "description": "@vumdoc/core",
   "license": "MIT",
@@ -33,6 +33,10 @@
     "wca/*",
     "LICENSE.md"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "vite build && tsc",
     "sb:dev": "storybook dev -p 6606 --no-open",
