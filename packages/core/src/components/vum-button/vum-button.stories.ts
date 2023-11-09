@@ -36,6 +36,10 @@ const meta = {
     href: {
       control: "text",
     },
+    target: {
+      control: "select",
+      options: ["_self", "_blank", "_parent", "_top"],
+    },
   },
 } satisfies Meta<VumButtonProps>;
 
@@ -80,5 +84,6 @@ export const LinkButton: Story = {
     isDisabled: false,
     type: "primary",
     href: "https://www.google.com",
+    target: "_blank",
   },
 };

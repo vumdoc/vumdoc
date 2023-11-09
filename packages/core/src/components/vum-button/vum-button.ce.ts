@@ -10,6 +10,7 @@ export type VumButtonProps = {
   type?: "primary" | "secondary" | "tertiary";
   isDisabled?: boolean;
   href?: string;
+  target?: "_self" | "_blank" | "_parent" | "_top";
 };
 
 @customElement("vum-button")
@@ -40,6 +41,9 @@ export class VumButton extends LitElement {
   @property({ attribute: "href", type: String })
   href: VumButtonProps["href"] = undefined;
 
+  @property({ attribute: "target", type: String })
+  target: VumButtonProps["target"] = undefined;
+
   render() {
     return this.href
       ? html`<a
@@ -53,6 +57,7 @@ export class VumButton extends LitElement {
           })}
           ?data-is-dark="${this.mode === "dark"}"
           href="${this.href}"
+          target="${this.target}"
         >
           <slot></slot>
         </a>`
