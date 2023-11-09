@@ -1,3 +1,5 @@
+import path from "path";
+
 import postcssNested from "postcss-nested";
 import postcssLit from "rollup-plugin-postcss-lit";
 import { defineConfig } from "vite";
@@ -25,6 +27,12 @@ export default defineConfig({
         exports: "named",
         manualChunks: undefined,
       },
+    },
+  },
+
+  resolve: {
+    alias: {
+      "~": path.join(__dirname, "../core"),
     },
   },
 });

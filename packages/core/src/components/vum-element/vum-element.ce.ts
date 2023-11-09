@@ -2,7 +2,7 @@ import { consola } from "consola";
 import { LitElement, css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 
-import "~/src/components/vum-button/vum-button.ce";
+import { VumButton } from "~/src/components/vum-button/vum-button.ce";
 
 export type VumElementProps = {
   countType: "+1" | "+2" | "+3";
@@ -67,6 +67,8 @@ export class VumElement extends LitElement {
   }
 
   render() {
+    new VumButton();
+
     return html`
       <div>
         <a

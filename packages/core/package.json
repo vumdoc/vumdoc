@@ -1,7 +1,7 @@
 {
   "name": "@vumdoc/core",
   "private": false,
-  "version": "0.0.1-0",
+  "version": "0.0.1-1",
   "type": "module",
   "description": "@vumdoc/core",
   "license": "MIT",
