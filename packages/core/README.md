@@ -1,0 +1,98 @@
+[![Thumbnail_core](https://github.com/vumdoc/vumdoc/assets/49429291/3ec476cf-bcff-4bc9-ba65-f9a1babe3394)](https://github.com/vumdoc/vumdoc/tree/main/packages/core)
+
+## Description
+Vumdoc is a document UI framework module that aims to be *a modern and very sophisticated document UI framework*
+
+## Getting Started
+### 1. Setup Project
+Create your project in Vite or Turbopack!
+
+### 2. Install Package
+Go to the project directory and install this module
+```shell
+npm i @vumdoc/core
+```
+```shell
+yarn add @vumdoc/core
+```
+```shell
+pnpm add @vumdoc/core
+```
+
+### 3. Import Package
+Import this module in the file that initializes the framework, etc.
+```ts
+// Vite + React
+// src/main.ts
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
+// Add ↓
+import "@vumdoc/core";
+// Add ↑
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+```
+```ts
+// Vite + Vue
+// src/main.ts
+
+import { createApp } from "vue";
+import "./style.css";
+import App from "./App.vue";
+// Add ↓
+import "@vumdoc/core";
+// Add ↑
+
+createApp(App).mount("#app");
+
+```
+
+### 4. Use!
+It can be used in `.html`, `.vue`, or `.tsx` by writing `<vum-[name]></vum-[name]>`.<br>
+Check the documentation for details.
+```tsx
+// Vite + React
+// src/App.tsx
+
+import { useState } from "react";
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <vum-button onClick={() => setCount((count) => count + 1)}>
+        count is {count}
+      </vum-button>
+    </>
+  );
+};
+
+export default App;
+
+```
+```vue
+<script setup lang="ts">
+// Vite + Vue
+// src/App.vue
+
+import { ref } from "vue";
+
+const count = ref(0);
+</script>
+
+<template>
+  <vum-button @click="count++">count is {{ count }}</vum-button>
+</template>
+
+<style scoped></style>
+
+```
