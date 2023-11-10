@@ -31,7 +31,8 @@
     "dist/*",
     "types/*",
     "wca/*",
-    "LICENSE.md"
+    "LICENSE.md",
+    "README.md"
   ],
   "publishConfig": {
     "access": "public",
