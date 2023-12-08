@@ -8,7 +8,7 @@ import {
 } from "~/src/components/vum-element/vum-element.ce";
 
 const meta = {
-  title: "components/vum-element(sample)",
+  title: "sample/vum-element",
   tags: ["autodocs"],
   render: () => new VumElement(),
   argTypes: {

@@ -18,8 +18,16 @@ const meta = {
       ?disabled=${args.isDisabled}
       type="${args.type}"
       href="${args.href}"
+      target="${args.target}"
       >vum-button</vum-button
     >`;
+  },
+  args: {
+    mode: "light",
+    isDisabled: false,
+    type: "primary",
+    href: undefined,
+    target: undefined,
   },
   argTypes: {
     mode: {

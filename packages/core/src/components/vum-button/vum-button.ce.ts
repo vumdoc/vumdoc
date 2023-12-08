@@ -13,6 +13,9 @@ export type VumButtonProps = {
   target?: "_self" | "_blank" | "_parent" | "_top";
 };
 
+/**
+ * The `vum-button` component is a button component.
+ */
 @customElement("vum-button")
 export class VumButton extends LitElement {
   /**

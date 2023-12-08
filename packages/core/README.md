@@ -96,3 +96,13 @@ const count = ref(0);
 <style scoped></style>
 
 ```
+
+## State of Progress
+
+✅: Ready to use<br>
+🚧: In progress<br>
+🚫: Not yet implemented
+
+| feature name     | status |
+| ---------------- | ------ |
+| `<vum-button />` | 🚧      |
