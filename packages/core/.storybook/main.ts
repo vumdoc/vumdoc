@@ -5,6 +5,7 @@ import { join, dirname, resolve } from "path";
 
 import postcssLit from "rollup-plugin-postcss-lit";
 import postcssNested from "postcss-nested";
+import autoStoryGenerator from "@vumdoc/auto-story-generator";
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -33,7 +34,13 @@ const config: StorybookConfig = {
   },
   viteFinal: (config) => {
     return mergeConfig(config, {
-      plugins: [postcssLit()],
+      plugins: [
+        postcssLit(),
+        autoStoryGenerator.vite({
+          dirname: resolve(__dirname, "../"),
+          preset: "lit",
+        }),
+      ],
 
       css: {
         postcss: {

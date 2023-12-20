@@ -7,7 +7,7 @@ import {
   VumButtonProps,
 } from "~/src/components/vum-button/vum-button.ce";
 
-const meta = {
+const meta: Meta<VumButtonProps> = {
   title: "components/vum-button",
   tags: ["autodocs"],
   render: (args) => {
@@ -23,75 +23,26 @@ const meta = {
     >`;
   },
   args: {
-    mode: "light",
-    isDisabled: false,
-    type: "primary",
+    mode: undefined,
+    isDisabled: undefined,
+    type: undefined,
     href: undefined,
     target: undefined,
   },
   argTypes: {
-    mode: {
-      control: "select",
-      options: ["dark", "light"],
-    },
-    type: {
-      control: "select",
-      options: ["primary", "secondary", "tertiary"],
-    },
-    isDisabled: {
-      control: "boolean",
-    },
-    href: {
-      control: "text",
-    },
+    mode: { control: "select", options: ["dark", "light"] },
+    isDisabled: { control: "boolean" },
+    type: { control: "select", options: ["primary", "secondary", "tertiary"] },
+    href: { control: "text" },
     target: {
       control: "select",
       options: ["_self", "_blank", "_parent", "_top"],
     },
   },
-} satisfies Meta<VumButtonProps>;
+};
 
 export default meta;
-type Story = StoryObj<VumButtonProps>;
 
-export const Primary: Story = {
-  args: {
-    mode: "light",
-    isDisabled: false,
-    type: "primary",
-  },
-};
+export type VumButtonStory = StoryObj<VumButtonProps>;
 
-export const Secondary: Story = {
-  args: {
-    mode: "light",
-    isDisabled: false,
-    type: "secondary",
-  },
-};
-
-export const Tertiary: Story = {
-  args: {
-    mode: "light",
-    isDisabled: false,
-    type: "tertiary",
-  },
-};
-
-export const Disabled: Story = {
-  args: {
-    mode: "light",
-    isDisabled: true,
-    type: "primary",
-  },
-};
-
-export const LinkButton: Story = {
-  args: {
-    mode: "light",
-    isDisabled: false,
-    type: "primary",
-    href: "https://www.google.com",
-    target: "_blank",
-  },
-};
+export const Primary: VumButtonStory = {};

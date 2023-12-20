@@ -22,19 +22,19 @@ export class VumButton extends LitElement {
    * Specify the display mode as `dark | light`.
    */
   @property({ attribute: "mode", type: String })
-  mode: VumButtonProps["mode"] = "light";
+  mode?: VumButtonProps["mode"] = "light";
 
   /**
    * Specify whether the button should be disabled, or not
    */
   @property({ attribute: "disabled", type: Boolean })
-  isDisabled: VumButtonProps["isDisabled"] = false;
+  isDisabled?: VumButtonProps["isDisabled"] = false;
 
   /**
    * Specify the button style
    */
   @property({ attribute: "type", type: String })
-  type: VumButtonProps["type"] = "primary";
+  type?: VumButtonProps["type"] = "primary";
 
   /**
    * The link will be opened when the button is clicked.
@@ -42,10 +42,10 @@ export class VumButton extends LitElement {
    * Specifying this will change it to `<a>`.
    */
   @property({ attribute: "href", type: String })
-  href: VumButtonProps["href"] = undefined;
+  href?: VumButtonProps["href"] = undefined;
 
   @property({ attribute: "target", type: String })
-  target: VumButtonProps["target"] = undefined;
+  target?: VumButtonProps["target"] = undefined;
 
   render() {
     return this.href

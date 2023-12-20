@@ -9,7 +9,8 @@
     "eslint": "pnpm -F \"@vumdoc/eslint-config\"",
     "prettier": "pnpm -F \"@vumdoc/prettier-config\"",
     "stylelint": "pnpm -F \"@vumdoc/stylelint-config\"",
-    "vue": "pnpm -F \"@vumdoc/vue\""
+    "vue": "pnpm -F \"@vumdoc/vue\"",
+    "asg": "pnpm -F \"@vumdoc/auto-story-generator\""
   },
   "keywords": [],
   "author": "",

@@ -5,6 +5,10 @@
       "path": "."
     },
     {
+      "name": "📦 asg",
+      "path": "packages/auto-story-generator"
+    },
+    {
       "name": "📄 docs",
       "path": "docs"
     },
@@ -38,7 +42,7 @@
     }
   ],
   "settings": {
-    "cSpell.words": ["consola", "satoshi", "vumdoc"],
+    "cSpell.words": ["consola", "magicast", "satoshi", "vumdoc"],
     "emmet.includeLanguages": {
       "postcss": "css"
     },
