@@ -15,6 +15,10 @@ const unplugin = createUnplugin((options: AsgOptions) => {
     name: "auto-story-generator",
     vite: {
       async handleHotUpdate({ file }: { file: string }) {
+        if (file.endsWith(".stories.ts")) return;
+
+        consola.info(`File ${file} changed.`);
+
         const mod = await loadFile(file);
         const project = new Project();
 
@@ -25,20 +29,22 @@ const unplugin = createUnplugin((options: AsgOptions) => {
 
         switch (options.preset) {
           case "lit": {
-            if (!file.endsWith(".ce.ts"))
-              return consola.error("Not a ce.ts file");
+            if (file.endsWith(".ce.ts")) {
+              const componentName = file
+                .split("/")
+                .pop()!
+                .replace(".ce.ts", "");
 
-            const componentName = file.split("/").pop()!.replace(".ce.ts", "");
-
-            consola.start(
-              `Start of automatic ${componentName} story generation`,
-            );
-            await genLitStoryFile({
-              sourceFile,
-              componentName,
-              relativeSourceFilePath: file.replace(options?.dirname, ""),
-              file,
-            });
+              consola.start(
+                `Start of automatic ${componentName} story generation`,
+              );
+              await genLitStoryFile({
+                sourceFile,
+                componentName,
+                relativeSourceFilePath: file.replace(options?.dirname, ""),
+                file,
+              });
+            }
             break;
           }
 

@@ -45,4 +45,12 @@ export default meta;
 
 export type VumButtonStory = StoryObj<VumButtonProps>;
 
-export const Primary: VumButtonStory = {};
+export const Primary: VumButtonStory = {
+  args: {
+    mode: "light",
+    isDisabled: false,
+    type: "primary",
+    href: undefined,
+    target: undefined,
+  },
+};
