@@ -1,25 +1,28 @@
 import { CSSResult, LitElement, html } from "lit";
-import { customElement } from "lit/decorators.js";
+import { customElement, property } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 
 import style from "~/src/components/{{kebabCase name}}/{{kebabCase name}}.post.css?inline";
 import { resetCss, satoshiFont, color } from "~/src/constants/styles";
 
-export type {{pascalCase name}}Props = {};
+export type {{pascalCase name}}Props = {
+  mode?: "dark" | "light";
+};
 
 @customElement("{{kebabCase name}}")
 export class {{pascalCase name}} extends LitElement {
-  /*
-  // sample
-  @property({ attribute: "sample", type: String })
-  sample: {{pascalCase name}}Props["sample"] = "sample";
-  */
+  /**
+   * Specify the display mode as `dark | light`.
+   */
+  @property({ attribute: "mode", type: String })
+  mode?: VumChipProps["mode"] = "light";
 
   render() {
     return html`<div
       class=${classMap({
         "{{kebabCase name}}": true,
       })}
+      ?data-is-dark="${this.mode === "dark"}"
     >
       <slot></slot>
     </div>`;

@@ -7,7 +7,7 @@ import {
   {{pascalCase name}}Props,
 } from "~/src/components/{{kebabCase name}}/{{kebabCase name}}.ce";
 
-const meta = {
+const meta: Meta<{{pascalCase name}}Props> = {
   title: "components/{{kebabCase name}}",
   tags: ["autodocs"],
   render: (args) => {
@@ -15,8 +15,9 @@ const meta = {
 
     return html`<{{kebabCase name}}>{{kebabCase name}}</{{kebabCase name}}>`;
   },
+  args: {},
   argTypes: {},
-} satisfies Meta<{{pascalCase name}}Props>;
+};
 
 export default meta;
 type Story = StoryObj<{{pascalCase name}}Props>;
