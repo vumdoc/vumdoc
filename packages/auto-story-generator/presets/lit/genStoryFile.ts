@@ -26,6 +26,7 @@ export const genLitStoryFile = async ({
   if (!propTypes) return consola.error("Could not find argTypes");
 
   fs.open(storiesFilePath, "r", async (err, fd) => {
+    // ファイルを開けなかったらファイルを作成する
     if (err) {
       const storyCode = `import { html } from "lit";
 
@@ -55,14 +56,17 @@ export type ${pascalComponentName}Story = StoryObj<${pascalComponentName}Props>;
 export const Primary: ${pascalComponentName}Story = {};
 `;
 
+      // 同期処理でファイルを作成する
       fs.writeFileSync(storiesFilePath, storyCode);
     }
 
     const storiesProject = new Project();
 
+    // ファイルを読み込む
     const storiesSourceFile =
       storiesProject.addSourceFileAtPath(storiesFilePath);
 
+    // stories.ts内のmetaを取得する
     const meta = storiesSourceFile.getVariableDeclaration("meta");
 
     if (
@@ -80,8 +84,10 @@ export const Primary: ${pascalComponentName}Story = {};
 
     if (!initializer) return consola.error("Could not find initializer");
 
+    // metaのrenderオブジェクトを取得する
     const renderProperty = initializer.getPropertyOrThrow("render");
 
+    // renderオブジェクトの値を書き換える
     renderProperty.set({
       initializer: `(args) => {
   new ${pascalComponentName}();
@@ -100,6 +106,7 @@ export const Primary: ${pascalComponentName}Story = {};
 }`,
     });
 
+    // metaのargsオブジェクトを取得する
     const argsProperty = initializer.getPropertyOrThrow("args");
 
     const args: { [key: string]: string | number | boolean | undefined } = {};
@@ -173,6 +180,7 @@ export const Primary: ${pascalComponentName}Story = {};
       initializer: `${argTypesText}`,
     });
 
+    // ファイルを保存する
     await storiesProject
       .save()
       .then(() => {

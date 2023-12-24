@@ -5,8 +5,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode", // デフォルトのフォーマッターを「prettier」にする
   "editor.tabSize": 2, // タブサイズを半角スペース二つにする
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
   },
   "stylelint.validate": ["css", "postcss", "post.css"], // stylelintの自動整形の対象ファイルを設定を行うようにする
   "files.eol": "\n", // 改行コードを指定
@@ -14,8 +14,8 @@
   "[handlebars]": {
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": false,
-      "source.fixAll.stylelint": false
+      "source.fixAll.eslint": "never",
+      "source.fixAll.stylelint": "never"
     }
   }
 }
