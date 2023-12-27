@@ -1,0 +1,7 @@
+{
+  "color-variables": {
+    "scope": "postcss",
+    "prefix": "--color",
+    "body": "${1|--primary-color,--secondary-color,--text-color,--sub-text-color,--background-color,--sub-background-color,--border-color,--dark-primary-color,--dark-secondary-color,--dark-text-color,--dark-sub-text-color,--dark-background-color,--dark-sub-background-color,--dark-border-color,--light-primary-color,--light-secondary-color,--light-text-color,--light-sub-text-color,--light-background-color,--light-sub-background-color,--light-border-color|}"
+  }
+}
