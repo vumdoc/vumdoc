@@ -1,0 +1,11 @@
+.vum-chip {
+  width: fit-content;
+  padding: 4px 12px;
+  font-weight: 500;
+  color: var(--text-color);
+  background-color: var(--sub-background-color);
+  border-radius: 128px;
+
+  /* &[data-is-dark] {
+  } */
+}
