@@ -3,7 +3,12 @@ import { customElement, property } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 
 import style from "~/src/components/{{kebabCase name}}/{{kebabCase name}}.post.css?inline";
-import { resetCss, satoshiFont, color } from "~/src/constants/styles";
+import {
+  resetCss,
+  satoshiFont,
+  color,
+  typography,
+} from "~/src/constants/styles";
 
 export type {{pascalCase name}}Props = {
   mode?: "dark" | "light";
@@ -15,7 +20,7 @@ export class {{pascalCase name}} extends LitElement {
    * Specify the display mode as `dark | light`.
    */
   @property({ attribute: "mode", type: String })
-  mode?: VumChipProps["mode"] = "light";
+  mode?: {{pascalCase name}}Props["mode"] = "light";
 
   render() {
     return html`<div
@@ -28,7 +33,13 @@ export class {{pascalCase name}} extends LitElement {
     </div>`;
   }
 
-  static styles = [color, satoshiFont, resetCss, style as unknown as CSSResult];
+  static styles = [
+    color,
+    satoshiFont,
+    typography,
+    resetCss,
+    style as unknown as CSSResult,
+  ];
 }
 
 declare global {

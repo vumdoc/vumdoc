@@ -153,6 +153,15 @@ export const genLitPropTypes = ({ sourceFile, componentName }: GenArgTypes) => {
           value: [],
         };
       }
+      // Object
+      case 524288: {
+        return {
+          name: prop.getName(),
+          type: ["object"],
+          isOptional,
+          value: [],
+        };
+      }
       // Union
       case 1048576: {
         const unions = propType.getUnionTypes().map((union) => {

@@ -38,33 +38,33 @@ export const COLORS = {
 };
 
 export const color = css`
-  * {
-    &[data-is-dark] {
-      --primary-color: ${unsafeCSS(COLORS.DARK.PRIMARY)};
-      --secondary-color: ${unsafeCSS(COLORS.DARK.SECONDARY)};
-      --text-color: ${unsafeCSS(COLORS.DARK.TEXT)};
-      --sub-text-color: ${unsafeCSS(COLORS.DARK.SUB_TEXT)};
-      --background-color: ${unsafeCSS(COLORS.DARK.BACKGROUND)};
-      --sub-background-color: ${unsafeCSS(COLORS.DARK.SUB_BACKGROUND)};
-      --border-color: ${unsafeCSS(COLORS.DARK.BORDER)};
+  :host([mode="dark"]) {
+    --primary-color: ${unsafeCSS(COLORS.DARK.PRIMARY)};
+    --secondary-color: ${unsafeCSS(COLORS.DARK.SECONDARY)};
+    --text-color: ${unsafeCSS(COLORS.DARK.TEXT)};
+    --sub-text-color: ${unsafeCSS(COLORS.DARK.SUB_TEXT)};
+    --background-color: ${unsafeCSS(COLORS.DARK.BACKGROUND)};
+    --sub-background-color: ${unsafeCSS(COLORS.DARK.SUB_BACKGROUND)};
+    --border-color: ${unsafeCSS(COLORS.DARK.BORDER)};
 
-      --dark-primary-color: ${unsafeCSS(COLORS.DARK.PRIMARY)};
-      --dark-secondary-color: ${unsafeCSS(COLORS.DARK.SECONDARY)};
-      --dark-text-color: ${unsafeCSS(COLORS.DARK.TEXT)};
-      --dark-sub-text-color: ${unsafeCSS(COLORS.DARK.SUB_TEXT)};
-      --dark-background-color: ${unsafeCSS(COLORS.DARK.BACKGROUND)};
-      --dark-sub-background-color: ${unsafeCSS(COLORS.DARK.SUB_BACKGROUND)};
-      --dark-border-color: ${unsafeCSS(COLORS.DARK.BORDER)};
+    --dark-primary-color: ${unsafeCSS(COLORS.DARK.PRIMARY)};
+    --dark-secondary-color: ${unsafeCSS(COLORS.DARK.SECONDARY)};
+    --dark-text-color: ${unsafeCSS(COLORS.DARK.TEXT)};
+    --dark-sub-text-color: ${unsafeCSS(COLORS.DARK.SUB_TEXT)};
+    --dark-background-color: ${unsafeCSS(COLORS.DARK.BACKGROUND)};
+    --dark-sub-background-color: ${unsafeCSS(COLORS.DARK.SUB_BACKGROUND)};
+    --dark-border-color: ${unsafeCSS(COLORS.DARK.BORDER)};
 
-      --light-primary-color: ${unsafeCSS(COLORS.LIGHT.PRIMARY)};
-      --light-secondary-color: ${unsafeCSS(COLORS.LIGHT.SECONDARY)};
-      --light-text-color: ${unsafeCSS(COLORS.LIGHT.TEXT)};
-      --light-sub-text-color: ${unsafeCSS(COLORS.LIGHT.SUB_TEXT)};
-      --light-background-color: ${unsafeCSS(COLORS.LIGHT.BACKGROUND)};
-      --light-sub-background-color: ${unsafeCSS(COLORS.LIGHT.SUB_BACKGROUND)};
-      --light-border-color: ${unsafeCSS(COLORS.LIGHT.BORDER)};
-    }
+    --light-primary-color: ${unsafeCSS(COLORS.LIGHT.PRIMARY)};
+    --light-secondary-color: ${unsafeCSS(COLORS.LIGHT.SECONDARY)};
+    --light-text-color: ${unsafeCSS(COLORS.LIGHT.TEXT)};
+    --light-sub-text-color: ${unsafeCSS(COLORS.LIGHT.SUB_TEXT)};
+    --light-background-color: ${unsafeCSS(COLORS.LIGHT.BACKGROUND)};
+    --light-sub-background-color: ${unsafeCSS(COLORS.LIGHT.SUB_BACKGROUND)};
+    --light-border-color: ${unsafeCSS(COLORS.LIGHT.BORDER)};
+  }
 
+  :host {
     --primary-color: ${unsafeCSS(COLORS.LIGHT.PRIMARY)};
     --secondary-color: ${unsafeCSS(COLORS.LIGHT.SECONDARY)};
     --text-color: ${unsafeCSS(COLORS.LIGHT.TEXT)};

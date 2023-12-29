@@ -1,0 +1,30 @@
+.vum-breadcrumbs {
+  .unordered {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .item {
+    color: var(--sub-text-color);
+
+    &:not(:last-child)::after {
+      display: inline-block;
+      margin: 0 0.5rem;
+      content: "/";
+    }
+
+    .link {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline solid var(--sub-text-color);
+      }
+    }
+
+    /* &[data-is-dark] {
+    } */
+  }
+}

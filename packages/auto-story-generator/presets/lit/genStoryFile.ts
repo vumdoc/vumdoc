@@ -100,6 +100,10 @@ export const Primary: ${pascalComponentName}Story = {};
         return ` ?${kebabCase(prop.name.substring(2))}=\${args.${prop.name}}`;
       }
 
+      if (prop.type[0] === "object") {
+        return ` .${kebabCase(prop.name)}="\${args.${prop.name}}"`;
+      }
+
       return ` ${kebabCase(prop.name)}="\${args.${prop.name}}"`;
     })
     .join("")}>${componentName}</${componentName}>\`;
@@ -151,6 +155,12 @@ export const Primary: ${pascalComponentName}Story = {};
       if (prop.type[0] === "boolean") {
         return (argTypes[prop.name] = {
           control: "boolean",
+        });
+      }
+
+      if (prop.type[0] === "object") {
+        return (argTypes[prop.name] = {
+          control: "object",
         });
       }
 
